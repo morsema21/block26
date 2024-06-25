@@ -7,7 +7,11 @@ export default function App() {
   const [selectedContactId, setSelectedContactId] = useState(null);
   return (
     <>
-      {selectedContactId ? <div>Selected Contact View</div> : <ContactList />}
+      {selectedContactId ? (
+        <SelectedContact selectedContactId={selectedContactId} />
+      ) : (
+        <ContactList setSelectedContactId={setSelectedContactId} />
+      )}
     </>
   );
 }

@@ -1,6 +1,9 @@
 import React from "react";
+import SelectedContact from "./SelectedContact";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
-export default function ContactRow({ setSelectedContactId, contact }) {
+export default function ContactRow({ contact, setSelectedContactId }) {
   return (
     <tr
       onClick={() => {
